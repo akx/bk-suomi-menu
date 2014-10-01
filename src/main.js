@@ -1,4 +1,4 @@
-var React = require("react/addons");
+var React = require("react");
 var AppComponent = require("./app.jsx");
 
 (function(window, document) {

@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
-var React = require("react/addons");
+var React = require("react");
 var Data = require("./data");
-var _ = require("lodash");
 
 function formatCurrency(value) {
 	if(!value) return "";
@@ -19,7 +18,6 @@ function formatCurrency(value) {
 }
 
 var AppComponent = React.createClass({
-	mixins: [React.addons.LinkedStateMixin],
 	propTypes: {
 		static: React.PropTypes.bool
 	},
@@ -33,12 +31,13 @@ var AppComponent = React.createClass({
 		};
 	},
 
-	getResultRows: function() {
+	getFilterPredicate: function() {
+		if(this.props.static) return function() { return true; };
 		var filter = ("" + this.state.filter).toLowerCase();
 		var night = !!this.state.night;
 		var onlySet = !!this.state.onlySet;
 		var maxPrice = parseFloat(this.state.maxPrice);
-		var filterPredicate = function(item) {
+		return function(item) {
 			if(filter.length > 1 && item.product.toLowerCase().indexOf(filter) == -1) return false;
 			if(night) {
 				if(!item.night_price) return false;
@@ -50,10 +49,17 @@ var AppComponent = React.createClass({
 			}
 			return true;
 		};
-		return _(Data.data).filter(filterPredicate).map(function(item) {
+	},
+
+	getResultRows: function() {
+		var rows = [], item, filterPredicate = this.getFilterPredicate();
+		var night = !!this.state.night;
+		for(var i = 0; i < Data.data.length; i++) {
+			item = Data.data[i];
+			if(!filterPredicate(item)) continue;
 			var price = (night ? item.night_price : item.price);
 			var setPrice = (night ? item.night_set_price : item.set_price);
-			return (
+			rows.push(
 				<tr key={item.id}>
 					<td>{item.category}</td>
 					<td>{item.product}</td>
@@ -61,21 +67,27 @@ var AppComponent = React.createClass({
 					<td className="ra">{formatCurrency(setPrice)}</td>
 				</tr>
 			);
-		});
+		}
+		return rows;
 	},
 
 	componentDidMount: function() {
 		this.refs.filterInput.getDOMNode().focus();
 	},
 
+	filterChanged: function(event) { this.setState({filter: event.target.value}); },
+	maxPriceChanged: function(event) { this.setState({maxPrice: event.target.value}); },
+	nightChanged: function(event) { this.setState({night: !!event.target.checked}); },
+	onlySetChanged: function(event) { this.setState({onlySet: event.target.checked}); },
+
 	render: function() {
 		var resultRows = this.getResultRows();
 		var controls = (this.props.static ? null : (
 			<form className="row controls pure-form pure-g">
-				<div className="pure-u-1-4"><input type="text" valueLink={this.linkState('filter')} placeholder="Hae..." ref="filterInput" className="pure-input-1" /></div>
-				<div className="pure-u-1-4"><input type="number" min="0" max="1000" valueLink={this.linkState('maxPrice')} placeholder="Maksimihinta" className="pure-input-1" /></div>
-				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" checkedLink={this.linkState('night')} /> Yömenu</label></div>
-				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" checkedLink={this.linkState('onlySet')} /> Vain ateriat</label></div>
+				<div className="pure-u-1-4"><input type="text" value={this.state.filter} onChange={this.filterChanged} placeholder="Hae..." ref="filterInput" className="pure-input-1" /></div>
+				<div className="pure-u-1-4"><input type="number" min="0" max="1000" value={this.state.maxPrice} onChange={this.maxPriceChanged} placeholder="Maksimihinta" className="pure-input-1" /></div>
+				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" onChange={this.nightChanged} checked={!!this.state.night} /> Yömenu</label></div>
+				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" onChange={this.onlySetChanged} checked={!!this.state.onlySet} /> Vain ateriat</label></div>
 			</form>
 		));
 		return (<div>
