@@ -1,0 +1,28 @@
+{
+  "name": "bk-suomi-menu",
+  "version": "0.0.0",
+  "description": "BK Suomi -menu",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akx/bk-suomi-menu.git"
+  },
+  "author": "Aarni Koskela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akx/bk-suomi-menu/issues"
+  },
+  "homepage": "https://github.com/akx/bk-suomi-menu",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "gulp-plumber": "~0.6.5",
+    "gulp-concat": "~2.4.1",
+    "gulp-util": "~3.0.1",
+    "gulp": "~3.8.8",
+    "envify": "~3.0.0",
+    "gulp-uglify": "~1.0.1",
+    "react": "~0.11.2",
+    "gulp-browserify": "~0.5.0",
+    "reactify": "~0.14.0"
+  }
+}
