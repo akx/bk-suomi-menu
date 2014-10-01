@@ -8,7 +8,7 @@ gutil = require("gulp-util");
 plumber = require("gulp-plumber");
 reactify = require("reactify");
 uglify = require("gulp-uglify");
-
+spawn = require('child_process').spawn;
 
 
 gulp.task("data", function(complete) {
@@ -64,6 +64,21 @@ gulp.task("static", ["data"], function(complete) {
 	staticify(function(html) {
 		fs.writeFileSync("./dist/static.html", html, "UTF-8");
 		complete();
+	});
+});
+
+
+gulp.task("pub", ["static", "release"], function(complete) {
+	// Kind of a ghetto way to schlep `dist` over to the `gh-pages` branch...
+	spawn("zip", ["-jr0", "dist.zip", "dist"], {"stdio": "inherit"}).on("close", function(code) {
+		if(code) return;
+		spawn("git", ["checkout", "gh-pages"], {"stdio": "inherit"}).on("close", function(code) {
+			if(code) return;
+			spawn("unzip", ["-o", "dist.zip"], {"stdio": "inherit"}).on("close", function(code) {
+				fs.unlinkSync("dist.zip");
+				complete();
+			});
+		});
 	});
 });
 
