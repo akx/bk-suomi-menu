@@ -3,6 +3,21 @@ var React = require("react/addons");
 var Data = require("./data");
 var _ = require("lodash");
 
+function formatCurrency(value) {
+	if(!value) return "";
+	try {
+		return value.toLocaleString(["fi", "sv", "en"], {
+			"style": "currency",
+			"currency": "EUR",
+			"minimumFractionDigits": 2,
+			"maximumFractionDigits": 2,
+		});
+	} catch (e) {
+		// Silly browser! :(
+	}
+	return value.toFixed(2);
+}
+
 var AppComponent = React.createClass({
 	mixins: [React.addons.LinkedStateMixin],
 	propTypes: {
@@ -42,8 +57,8 @@ var AppComponent = React.createClass({
 				<tr key={item.id}>
 					<td>{item.category}</td>
 					<td>{item.product}</td>
-					<td className="ra">{price ? price.toFixed(2) : ""}</td>
-					<td className="ra">{setPrice ? setPrice.toFixed(2) : ""}</td>
+					<td className="ra">{formatCurrency(price)}</td>
+					<td className="ra">{formatCurrency(setPrice)}</td>
 				</tr>
 			);
 		});

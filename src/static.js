@@ -1,4 +1,5 @@
 var fs = require("fs");
+var intl = require("intl"); // Patch toLocaleString.
 
 function generate(callback) {
 	console.log("Rendering markup...");
