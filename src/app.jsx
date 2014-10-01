@@ -14,6 +14,7 @@ var AppComponent = React.createClass({
 			filter: "",
 			night: (!this.props.static) && (hour >= 23 || hour < 8),
 			onlySet: false,
+			maxPrice: ""
 		};
 	},
 
@@ -21,12 +22,15 @@ var AppComponent = React.createClass({
 		var filter = ("" + this.state.filter).toLowerCase();
 		var night = !!this.state.night;
 		var onlySet = !!this.state.onlySet;
+		var maxPrice = parseFloat(this.state.maxPrice);
 		var filterPredicate = function(item) {
 			if(filter.length > 1 && item.product.toLowerCase().indexOf(filter) == -1) return false;
 			if(night) {
 				if(!item.night_price) return false;
 				if(onlySet && !item.night_set_price) return false;
+				if(maxPrice > 0 && item.night_price > maxPrice) return false;
 			} else {
+				if(maxPrice > 0 && item.price > maxPrice) return false;
 				if(onlySet && !item.set_price) return false;
 			}
 			return true;
@@ -53,7 +57,8 @@ var AppComponent = React.createClass({
 		var resultRows = this.getResultRows();
 		var controls = (this.props.static ? null : (
 			<form className="row controls pure-form pure-g">
-				<div className="pure-u-2-5"><input type="text" valueLink={this.linkState('filter')} placeholder="Hae..." ref="filterInput" className="pure-input-1" /></div>
+				<div className="pure-u-1-4"><input type="text" valueLink={this.linkState('filter')} placeholder="Hae..." ref="filterInput" className="pure-input-1" /></div>
+				<div className="pure-u-1-4"><input type="number" min="0" max="1000" valueLink={this.linkState('maxPrice')} placeholder="Maksimihinta" className="pure-input-1" /></div>
 				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" checkedLink={this.linkState('night')} /> Yömenu</label></div>
 				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" checkedLink={this.linkState('onlySet')} /> Vain ateriat</label></div>
 			</form>
