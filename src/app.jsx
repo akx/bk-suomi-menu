@@ -5,12 +5,15 @@ var _ = require("lodash");
 
 var AppComponent = React.createClass({
 	mixins: [React.addons.LinkedStateMixin],
+	propTypes: {
+		static: React.PropTypes.bool
+	},
 	getInitialState: function() {
 		var hour = (new Date().getHours());
 		return {
 			filter: "",
-			night: (hour >= 23 || hour < 8),
-			onlySet: false
+			night: (!this.props.static) && (hour >= 23 || hour < 8),
+			onlySet: false,
 		};
 	},
 
@@ -35,8 +38,8 @@ var AppComponent = React.createClass({
 				<tr key={item.id}>
 					<td>{item.category}</td>
 					<td>{item.product}</td>
-					<td className="text-right">{price ? price.toFixed(2) : ""}</td>
-					<td className="text-right">{setPrice ? setPrice.toFixed(2) : ""}</td>
+					<td className="ra">{price ? price.toFixed(2) : ""}</td>
+					<td className="ra">{setPrice ? setPrice.toFixed(2) : ""}</td>
 				</tr>
 			);
 		});
@@ -48,12 +51,15 @@ var AppComponent = React.createClass({
 
 	render: function() {
 		var resultRows = this.getResultRows();
-		return (<div>
+		var controls = (this.props.static ? null : (
 			<form className="row controls pure-form pure-g">
 				<div className="pure-u-2-5"><input type="text" valueLink={this.linkState('filter')} placeholder="Hae..." ref="filterInput" className="pure-input-1" /></div>
 				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" checkedLink={this.linkState('night')} /> Yömenu</label></div>
 				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" checkedLink={this.linkState('onlySet')} /> Vain ateriat</label></div>
 			</form>
+		));
+		return (<div>
+			{controls}
 			<div className="row results table-responsive">
 				<table className="pure-table pure-table-striped">
 					<thead>

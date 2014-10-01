@@ -10,6 +10,7 @@ reactify = require("reactify");
 uglify = require("gulp-uglify");
 
 
+
 gulp.task("data", function(complete) {
 	var lines = fs.readFileSync("data/menu.csv", "UTF-8")
 		.split("\n")
@@ -57,6 +58,14 @@ gulp.task("release", ["data"], function() {
 		.pipe(gulp.dest("dist"));
 });
 
+gulp.task("static", ["data"], function(complete) {
+	require('node-jsx').install();
+	var staticify = require("./src/static");
+	staticify(function(html) {
+		fs.writeFileSync("./dist/static.html", html, "UTF-8");
+		complete();
+	});
+});
 
 gulp.task("watch", function() {
 	gulp.watch(["src/*.js", "src/**/*.js", "src/*.jsx", "src/**/*.jsx"], ["debug"]);
