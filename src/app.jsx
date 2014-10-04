@@ -83,17 +83,19 @@ var AppComponent = React.createClass({
 	render: function() {
 		var resultRows = this.getResultRows();
 		var controls = (this.props.static ? null : (
-			<form className="row controls pure-form pure-g">
-				<div className="pure-u-1-4"><input type="text" value={this.state.filter} onChange={this.filterChanged} placeholder="Hae..." ref="filterInput" className="pure-input-1" /></div>
-				<div className="pure-u-1-4"><input type="number" min="0" max="1000" value={this.state.maxPrice} onChange={this.maxPriceChanged} placeholder="Maksimihinta" className="pure-input-1" /></div>
-				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" onChange={this.nightChanged} checked={!!this.state.night} /> Yömenu</label></div>
-				<div className="pure-u-1-4"><label className="pure-checkbox">&nbsp;<input type="checkbox" onChange={this.onlySetChanged} checked={!!this.state.onlySet} /> Vain ateriat</label></div>
-			</form>
+			<table className="row controls">
+				<tr>
+					<td><input type="text" value={this.state.filter} onChange={this.filterChanged} placeholder="Hae..." ref="filterInput" /></td>
+					<td><input type="number" min="0" max="1000" value={this.state.maxPrice} onChange={this.maxPriceChanged} placeholder="Maksimihinta" /></td>
+					<td><label>&nbsp;<input type="checkbox" onChange={this.nightChanged} checked={!!this.state.night} /> Yömenu</label></td>
+					<td><label>&nbsp;<input type="checkbox" onChange={this.onlySetChanged} checked={!!this.state.onlySet} /> Vain ateriat</label></td>
+				</tr>
+			</table>
 		));
 		return (<div>
 			{controls}
-			<div className="row results table-responsive">
-				<table className="pure-table pure-table-striped">
+			<div className="row results">
+				<table>
 					<thead>
 						<tr>
 							<th>Kategoria</th>
