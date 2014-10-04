@@ -15,7 +15,7 @@ gulp.task("data", function(complete) {
 	var lines = fs.readFileSync("data/menu.csv", "UTF-8")
 		.split("\n")
 		.filter(function(line){return line.indexOf(";") > -1; })
-		.map(function(line){return line.split(";"); });
+		.map(function(line){return line.replace(/\r/g, "").split(";"); });
 
 	var header = lines.shift();
 	var data = lines.map(function(datum, lineNo) {
