@@ -12,10 +12,10 @@ spawn = require('child_process').spawn;
 
 
 gulp.task("data", function(complete) {
-	var lines = fs.readFileSync("data/menu.csv", "UTF-8")
+	var lines = fs.readFileSync("data/menu.tsv", "UTF-8")
 		.split("\n")
-		.filter(function(line){return line.indexOf(";") > -1; })
-		.map(function(line){return line.replace(/\r/g, "").split(";"); });
+		.filter(function(line){return line.indexOf("\t") > -1; })
+		.map(function(line){return line.replace(/\r/g, "").split("\t"); });
 
 	var header = lines.shift();
 	var data = lines.map(function(datum, lineNo) {
