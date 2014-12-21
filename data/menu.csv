@@ -24,16 +24,18 @@ Hampurilaiset;Veggie Burger;4.4;6.75;4.4;7.75;1
 Hampurilaiset;King Box® -lastenateria;;4.1;;;1
 Salaatit;Grilled Chicken -salaatti;6.95;;;;1
 Salaatit;Crispy Chicken -salaatti;6.95;;;;1
-King Snacks;Sipulirenkaat 6 kpl;2;;;;6
-King Snacks;Sipulirenkaat 9 kpl;2.8;;2.8;;9
+King Snacks;Sipulirenkaat 6 kpl;2;6.3;;;6
+King Snacks;Sipulirenkaat 9 kpl;2.8;6.95;2.8;;9
 King Snacks;Chicken Nuggets 4 kpl;2;;;;4
-King Snacks;Chicken Nuggets 6 kpl;3;;;;6
-King Snacks;Chicken Nuggets 9 kpl;4.1;;;;9
-King Snacks;Chili Cheese 4 kpl;1.7;;;;4
-King Snacks;Chili Cheese 6 kpl;2.2;;2.2;;6
+King Snacks;Chicken Nuggets 6 kpl;3;6.3;;;6
+King Snacks;Chicken Nuggets 9 kpl;4.1;6.95;;;9
+King Snacks;Chili Cheese 4 kpl;1.7;6.3;;;4
+King Snacks;Chili Cheese 6 kpl;2.2;6.95;2.2;;6
 King Snacks;Ranskalaiset, pienet;1.75;;;;1
 King Snacks;Ranskalaiset, normaali;2.35;;;;1
 King Snacks;Ranskalaiset, isot;2.55;;2.55;;1
+King Snacks;Snack Box (sis. 2 dippiä);8.30;;8.30;;1
+King Snacks;Mix Box (sis. 2 dippiä);8.30;;8.30;;1
 Juomat;Limu, pieni;1.55;;;;1
 Juomat;Limu, normaali;2.35;;;;1
 Juomat;Limu, iso;2.55;;2.55;;1
