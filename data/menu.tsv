@@ -1,74 +1,76 @@
 category	product	price	set_price	night_price	night_set_price	pieces	energy_kcal	energy_kj	protein_g	carbs_g	sugar_g	fat_g	fat_mono_g	fat_poly_g	fat_sat_g	fiber_g	natrium_g
 Hampurilaiset	Whopper®	4.6	6.95	4.6	7.95	1	653	2741	30.5	51.5	11.8	35.4	18.2	5.8	9.8	3.4	1.043
-Hampurilaiset	Whopper® Cheese	5	7.35			1											
+Hampurilaiset	Whopper® Cheese	5	7.35			1
 Hampurilaiset	Double Whopper	5.6	7.95	5.6	8.95	1	894.3	3746	51.4	51.9	11.8	52.8	25.9	6.1	17.9	3.8	1.043
-Hampurilaiset	Double Whopper® Cheese	6	8.35			1											
+Hampurilaiset	Double Whopper® Cheese	6	8.35			1
 Hampurilaiset	Whopper® Junior	2.8	5.1			1	343	1440	15.2	32.8	6.7	16.9	8.9	3.1	4.2	1.9	0.580
-Hampurilaiset	Whopper® Junior with Cheese	3.2	5.5			1											
+Hampurilaiset	Whopper® Junior with Cheese	3.2	5.5			1
 Hampurilaiset	Steakhouse	5.05	7.45	5.05	8.45	1	727.8	3043	35.4	48.5	12.8	43.1	21.3	5	16.2	3	1.199
 Hampurilaiset	Double Steakhouse	6.05	8.45	6.05	9.45	1	947.3	3955	53.7	48.6	12.8	59.3	29.5	5.3	23.8	3	1.275
+Hampurilaiset	Big King	4.1	6.55
+Hampurilaiset	Big King XXL	5.75	8.20
 Hampurilaiset	Hampurilainen	1	4.45			1	274.3	1153	15	31.9	6	9.9	4.6	1	3.6	1.8	0.556
-Hampurilaiset	Juustohampurilainen	1.4	4.8			1	315.6	1324	17.3	32.4	6.5	13.2	5.6	1.1	5.7	1.8	0.767
+Hampurilaiset	Juustohampurilainen	1.4	4.85			1	315.6	1324	17.3	32.4	6.5	13.2	5.6	1.1	5.7	1.8	0.767
 Hampurilaiset	Tuplajuustohampurilainen	3.4	5.75	3.4	6.75	1	459.9	1924	29	33.1	6.9	23.8	9.9	1.2	11.1	2.1	0.979
-Hampurilaiset	Chicken Nugget Burger	2					366.4	1539	14.1	38.8	5	16.5	8.3	4.4	1.6	2.3	0.693
+Hampurilaiset	Chicken Nugget Burger	2.6	4.95				366.4	1539	14.1	38.8	5	16.5	8.3	4.4	1.6	2.3	0.693
 Hampurilaiset	Long Chicken®	4.6	6.95			1	475.5	1998	24	55.7	6.6	17.1	8.6	3.8	4.2	2.8	1.436
 Hampurilaiset	Long Chicken® with Cheese	5	7.35			1	687.7	2883	28.8	53.1	6.8	39.5	20	8.4	9.6	2.8	1.746
 Hampurilaiset	Chicken Tendercrisp®	5.4	7.75	5.4	8.75	1	621.1	2608	28	51.1	6.3	32.7	18.2	8.5	5.4	3.1	1.244
-Hampurilaiset	Chicken Tendercrisp® with Cheese	5.8	8.1			1	701.8	2942	32.5	52.4	7.2	39.2	20.3	8.5	9.5	3.2	1.656
-Hampurilaiset	Crispy Chicken	2.6	4.95			1											
-Hampurilaiset	Crispy Chicken with Cheese	3	5.35			1											
-Hampurilaiset	Little Grilled Chicken	2.6	4.95			1											
-Hampurilaiset	Breakfast Burger	3.6															
+Hampurilaiset	Chicken Tendercrisp® with Cheese	5.8	8.15			1	701.8	2942	32.5	52.4	7.2	39.2	20.3	8.5	9.5	3.2	1.656
+Hampurilaiset	Crispy Chicken	2.6	4.95			1
+Hampurilaiset	Crispy Chicken with Cheese	3	5.35			1
+Hampurilaiset	Little Grilled Chicken	2.6	4.95			1
+Hampurilaiset	Breakfast Burger	3.6
 Hampurilaiset	Fish King	4.4	6.75			1	498.6	2090	17.3	43.6	4.4	27.9	14	7.1	5.5	2.8	1.021
-Hampurilaiset	Veggie Burger	4.4	6.75	4.4	7.75	1	494.3	2077	11.9	60.7	8.2	23.4	n/a	n/a	4.8	5.7	
-Hampurilaiset	King Box® -lastenateria		4.1			1											
+Hampurilaiset	Veggie Burger	4.4	6.75	4.4	7.75	1	494.3	2077	11.9	60.7	8.2	23.4	n/a	n/a	4.8	5.7
+Hampurilaiset	King Box® -lastenateria		4.1			1
 Salaatit	Grilled Chicken -salaatti	6.95				1	126.6	534	19.8	5.6	5.5	2.9	0.8	0.7	0.7	2.5	0.421
-Salaatit	Crispy Chicken -salaatti	6.95				1											
-King Snacks	Sipulirenkaat 6 kpl	2	6.3			6	278.2	1165.2	4.6	33.6	3.1	13.3	7.1	2.8	3	3	0.143
-King Snacks	Sipulirenkaat 9 kpl	2.8	6.95	2.8		9	417.24	1747/08/01	6.8	50.4	4.7	20	10.6	4.1	4.5	4.5	0.214
+Salaatit	Crispy Chicken -salaatti	6.95				1
+King Snacks	Sipulirenkaat 6 kpl	2.4	6.3			6	278.2	1165.2	4.6	33.6	3.1	13.3	7.1	2.8	3	3	0.143
+King Snacks	Sipulirenkaat 9 kpl	2.6	6.95	2.8		9	417.24	1747/08/01	6.8	50.4	4.7	20	10.6	4.1	4.5	4.5	0.214
 King Snacks	Chicken Nuggets 4 kpl	2				4	208.3	871	11.5	19.3	7.4	9.1	3.5	2	1.1	1.5	0.642
 King Snacks	Chicken Nuggets 6 kpl	3	6.3			6	299	1250	17.2	25.8	7.9	13.7	5.3	3	1.6	2.1	0.850
 King Snacks	Chicken Nuggets 9 kpl	4.1	6.95			9	461.9	1932	25.9	41.9	15.1	20.5	7.9	4.6	2.4	3.3	1.388
-King Snacks	Chili Cheese 4 kpl	1.7	6.3			4	237.9	879	7	25.1	1.1	13.3	4.8	1.6	5.9	2.4	0.624
-King Snacks	Chili Cheese 6 kpl	2.2	6.95	2.2		6	366	1352	10.8	38.6	1.7	20.4	7.3	2.5	9	3.7	0.96
+King Snacks	Chili Cheese 4 kpl	2.4	6.3			4	237.9	879	7	25.1	1.1	13.3	4.8	1.6	5.9	2.4	0.624
+King Snacks	Chili Cheese 6 kpl	2.6	6.95	2.2		6	366	1352	10.8	38.6	1.7	20.4	7.3	2.5	9	3.7	0.96
 King Snacks	Ranskalaiset, pienet	1.75				1	222.3	932	2.9	29.3	0.2	10	5	1.9	3.1	2.1	0.459
 King Snacks	Ranskalaiset, normaali	2.35				1	276.6	1160	3.6	36.4	0.2	12.4	6.3	2.4	3.8	2.6	0.571
 King Snacks	Ranskalaiset, isot	2.55		2.55		1	395.2	1658	5.1	52	0.3	17.8	9	3.4	5.4	3.7	0.816
-King Snacks	Snack Box (sis. 2 dippiä)	8.30		8.30		1											
-King Snacks	Mix Box (sis. 2 dippiä)	8.30		8.30		1											
-Juomat	Limu, pieni	1.55				1											
-Juomat	Limu, normaali	2.35				1											
-Juomat	Limu, iso	2.55		2.55		1											
-Juomat	Tropicana-appelsiinimehu	1.9		1.9		1											
-Juomat	Tropicana-omenamehu	1.9		1.9		1											
-Juomat	Lähdevesi	2.5		2.5		1											
-Juomat	Maito	1.2		1.2		1											
-Juomat	King-kahvi	1.6		1.6		1											
-Juomat	Kahvi	1.2		1.2		1											
-Juomat	Espresso	1.5		1.5		1											
-Juomat	Cappuccino	1.8		1.8		1											
-Juomat	Latte	2		2		1											
-Juomat	King-tee	1.6		1.6		1											
-Juomat	Tee	1.2		1.2		1											
-Jälkiruuat	Jäätelö	0.5				1											
-Jälkiruuat	Sundae (mansikka, suklaa, kinuski)	1.7				1											
-Jälkiruuat	BK Fusion® (Oreo®, Kit Kat®, Strawberry Cheesecake)	2.5				1											
-Jälkiruuat	Mustikkamuffinssi	2		2		1											
-Jälkiruuat	Suklaamuffinssi	2		2		1											
-Jälkiruuat	Suklaadonitsi	1.5		1.5		1											
-Jälkiruuat	Minipannukakut 6 kpl + siirappi	2				6											
-Jälkiruuat	Minipannukakut 9 kpl + siirappi	2.5				9											
-Jälkiruuat	Suklaa-Hottie Brownie	2.2				1											
-Jälkiruuat	Smoothie (mansikka, banaani, mango) (medium)	3.2				1											
-Jälkiruuat	Smoothie (mansikka, banaani, mango) (iso)	3.5				1											
-Jälkiruuat	Frappé (suklaa, kinuski) (medium)	3.2				1											
-Jälkiruuat	Frappé (suklaa, kinuski) (iso)	3.5				1											
-Jälkiruuat	Pirtelö (vanilja, mansikka, suklaa) (medium)	2.5				1											
-Jälkiruuat	Pirtelö (vanilja, mansikka, suklaa) (iso)	2.9				1											
-Ekstrat	Jogurttikastike	0.25				1											
-Ekstrat	Balsamico-salaattikastike	0.25				1											
-Ekstrat	Juustosiivu (1 kpl)	0.4		0.4		1	80,6	334	4,5	0,9	0,9	6,5	2,1	0,1	4,1	0,1	0,412
-Ekstrat	Juustosiivu (2 kpl)	0.8		0.8		2											
-Ekstrat	Pihvi	1		1		1											
-Ekstrat	Pekoniviipaleet (4 siivua)	0.5		0.5		4	35,4	147	3	0,4	0,3	2,4	1,4	0,3	0,7	0	0,168
-Ekstrat	Iso ateria (isommat ranskalaiset ja juoma)	1				1											
+King Snacks	Snack Box (sis. 2 dippiä)	7.8		8.30		1
+King Snacks	Mix Box (sis. 2 dippiä)	7.8		8.30		1
+Juomat	Limu, pieni	1.55				1
+Juomat	Limu, normaali	2.35				1
+Juomat	Limu, iso	2.55		2.55		1
+Juomat	Tropicana-appelsiinimehu	1.9		1.9		1
+Juomat	Tropicana-omenamehu	1.9		1.9		1
+Juomat	Lähdevesi	2.5		2.5		1
+Juomat	Maito	1.2		1.2		1
+Juomat	King-kahvi	1.6		1.6		1
+Juomat	Kahvi	1.2		1.2		1
+Juomat	Espresso	1.5		1.5		1
+Juomat	Cappuccino	1.8		1.8		1
+Juomat	Latte	2		2		1
+Juomat	King-tee	1.6		1.6		1
+Juomat	Tee	1.2		1.2		1
+Jälkiruuat	Jäätelö	0.5				1
+Jälkiruuat	Sundae (mansikka, suklaa, kinuski)	1.7				1
+Jälkiruuat	BK Fusion® (Oreo®, Kit Kat®, Strawberry Cheesecake)	2.5				1
+Jälkiruuat	Mustikkamuffinssi	2		2		1
+Jälkiruuat	Suklaamuffinssi	2		2		1
+Jälkiruuat	Suklaadonitsi	1.5		1.5		1
+Jälkiruuat	Minipannukakut 6 kpl + siirappi	2				6
+Jälkiruuat	Minipannukakut 9 kpl + siirappi	2.5				9
+Jälkiruuat	Suklaa-Hottie Brownie	2.2				1
+Jälkiruuat	Smoothie (mansikka, banaani, mango) (medium)	3.2				1
+Jälkiruuat	Smoothie (mansikka, banaani, mango) (iso)	3.5				1
+Jälkiruuat	Frappé (suklaa, kinuski) (medium)	3.2				1
+Jälkiruuat	Frappé (suklaa, kinuski) (iso)	3.5				1
+Jälkiruuat	Pirtelö (vanilja, mansikka, suklaa) (medium)	2.5				1
+Jälkiruuat	Pirtelö (vanilja, mansikka, suklaa) (iso)	2.9				1
+Ekstrat	Jogurttikastike	0.25				1
+Ekstrat	Balsamico-salaattikastike	0.25				1
+Ekstrat	Juustosiivu (1 kpl)	0.4		0.4		1	80.6	334	4.5	0.9	0.9	6.5	2.1	0.1	4.1	0.1	0.412
+Ekstrat	Juustosiivu (2 kpl)	0.8		0.8		2
+Ekstrat	Pihvi	1		1		1
+Ekstrat	Pekoniviipaleet (4 siivua)	0.5		0.5		4	35.4	147	3	0.4	0.3	2.4	1.4	0.3	0.7	0	0.168
+Ekstrat	Iso ateria (isommat ranskalaiset ja juoma)	1				1
