@@ -15,19 +15,19 @@
   "homepage": "https://github.com/akx/bk-suomi-menu",
   "dependencies": {
     "cssmin": "~0.4.1",
-    "envify": "~3.0.0",
-    "gulp": "~3.8.8",
+    "envify": "~3.4.0",
+    "gulp": "~3.9.0",
     "gulp-browserify": "~0.5.0",
-    "gulp-concat": "~2.4.1",
-    "gulp-plumber": "~0.6.5",
-    "gulp-uglify": "~1.0.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-plumber": "~1.0.1",
+    "gulp-uglify": "~1.4.1",
     "gulp-util": "~3.0.1",
-    "intl": "^0.1.4",
-    "jsdom": "~1.0.0",
-    "lodash": "~2.4.1",
-    "minimize": "~0.9.0",
+    "intl": "^1.0.0",
+    "jsdom": "^6.5.1",
+    "lodash": "~3.10.1",
+    "minimize": "~1.7.2",
     "node-jsx": "~0.11.0",
     "react": "~0.11.2",
-    "reactify": "~0.14.0"
+    "reactify": "~0.14.1"
   }
 }
